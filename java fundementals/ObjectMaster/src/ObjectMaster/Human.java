@@ -1,10 +1,10 @@
 package ObjectMaster;
 
 public class Human {
-private int str;
-private int stealth;
-private int intelligence;
-private int health;
+protected int str;
+protected int stealth;
+protected int intelligence;
+protected int health;
 public Human() {
 	str = 3;
 	stealth = 3;
