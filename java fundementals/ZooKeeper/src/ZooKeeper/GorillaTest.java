@@ -11,7 +11,16 @@ public class GorillaTest {
 		x.displayEnergy();
 		x.throwSomthing();
 		x.displayEnergy();
-
+		System.out.println("______________________________________");
+		Bat y=new Bat();
+		y.displayEnergy();
+		y.attackTown();
+		y.displayEnergy();
+		y.eatHumans();
+		y.displayEnergy();
+		y.Fly();
+		y.displayEnergy();
+		
 	}
 
 }
