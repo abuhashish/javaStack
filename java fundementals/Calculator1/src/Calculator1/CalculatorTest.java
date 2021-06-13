@@ -9,11 +9,12 @@ public class CalculatorTest {
 		calc.preformOperation(10.0);
 		calc.preformOperation("+");
 		calc.preformOperation(10.0);
+		
 		calc.preformOperation("*");
 		calc.preformOperation(10.0);
 		calc.preformOperation("*");
 		calc.preformOperation(10.0);
-		calc.preformOperation("+");
+		calc.preformOperation("/");
 		calc.preformOperation(10.0);
 		calc.preformOperation("=");
 		calc.organize();

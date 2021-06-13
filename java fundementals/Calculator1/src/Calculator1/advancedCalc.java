@@ -58,13 +58,26 @@ public class advancedCalc {
 		for (int i =0;i<stack.size();i++) {
 
 			if (stack.get(i).charAt(0)==plus) {
-				sum+=Double.parseDouble(stack.get(i-1))+ Double.parseDouble(stack.get(i+1));
+				Double g=Double.parseDouble(stack.get(i-1))+ Double.parseDouble(stack.get(i+1));
+				stack.remove(i+1);
+				stack.remove(i);
+				stack.remove(i-1);
+				stack.add(i-1,g.toString());
+				i=0;
+				
 			}
-			else if (stack.get(i).charAt(0)==minus)
-				sum+=Double.parseDouble(stack.get(i-1))- Double.parseDouble(stack.get(i+1));
+			else if (stack.get(i).charAt(0)==minus) {
+				Double g=Double.parseDouble(stack.get(i-1))- Double.parseDouble(stack.get(i+1));
+				stack.remove(i+1);
+				stack.remove(i);
+				stack.remove(i-1);
+				stack.add(i-1,g.toString());
+				i=0;
+			}
 			else if (stack.get(i).charAt(0)==equal)
-				System.out.println(sum);
-//		}
+				System.out.println(stack.get(0));
+
 	}
+	
 }
 }
