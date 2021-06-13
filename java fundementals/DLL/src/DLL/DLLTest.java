@@ -9,7 +9,7 @@ public class DLLTest {
         Node n4 = new Node(60);
         Node n5 = new Node(80);
         Node n6 = new Node(100);
-        
+        Node n7 = new Node(500);
         dll.push(n1);
         dll.push(n2);
         dll.push(n3);
@@ -18,8 +18,10 @@ public class DLLTest {
         dll.push(n6);
   
         dll.printValuesForward();
-        dll.insertAt(n6, 1);
-       
+        System.out.println("*******************************");
+        dll.insertAt(n7, 1);
+        dll.removeAt(1);
+        dll.printValuesForward();
         
     }
 }

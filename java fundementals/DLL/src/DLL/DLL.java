@@ -74,9 +74,20 @@ public class DLL {
 	    	for (int g=0;g<index-1;g++) {
 	    		current=current.next;
 	    	}
+	    	Node next=current.next;
 	    	current.next=newNode;
-	    	
-	    	System.out.println(current.value);
+	    	next.previous=newNode;
+	    	current.next.next=next;
+	    	current.next.previous=current;
+	    
 	    }
+	    void removeAt(int index) {
+	    	Node current = this.head;
+	    	for (int g=0;g<index-1;g++) {
+	    		current=current.next;
+	    	}
+	    	current.next=current.next.next;
+	    }
+	 
 	}
 
