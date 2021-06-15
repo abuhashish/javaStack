@@ -1,4 +1,5 @@
 package com.codingdojo.Strings;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,6 +19,7 @@ public class CodingController {
  public String java() {
 	 return "java spring is better";
  }
+
 }
 //Create a controller named 'CodingController'. For the first 3 routes, use the @RequestMapping annotation.
 //Have an http GET request to 'http://localhost:8080/coding' display a text that says 'Hello Coding Dojo!'.
