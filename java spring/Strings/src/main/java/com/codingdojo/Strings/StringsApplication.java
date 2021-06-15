@@ -7,8 +7,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController
+@RequestMapping("shit")
 public class StringsApplication {
-
+	
 	public static void main(String[] args) {
 		SpringApplication.run(StringsApplication.class, args);
 	}
