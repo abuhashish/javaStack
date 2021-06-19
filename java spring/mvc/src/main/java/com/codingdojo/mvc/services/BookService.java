@@ -50,6 +50,10 @@ public class BookService {
     		}
     	else return null;
     	}
+    public void updateBook(Book books)   
+    {  
+    bookRepository.save(books);  
+    }  
     }  
     
      

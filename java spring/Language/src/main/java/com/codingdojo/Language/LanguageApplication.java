@@ -1,14 +1,13 @@
-package com.codingdojo.mvc;
+package com.codingdojo.Language;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-
-public class MvcApplication {
+public class LanguageApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MvcApplication.class, args);
+		SpringApplication.run(LanguageApplication.class, args);
 	}
 
 }
