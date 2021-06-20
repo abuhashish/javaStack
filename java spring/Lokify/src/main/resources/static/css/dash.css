@@ -1,0 +1,15 @@
+*{
+	margin:0 auto;
+	padding :0;
+}
+.main{
+	width:1000px;
+	height:1000px;
+}
+a{
+	color:red;
+}
+nav{
+	display:flex;
+	justify-content:space-evenly;
+}
