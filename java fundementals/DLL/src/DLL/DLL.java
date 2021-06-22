@@ -29,9 +29,21 @@ public class DLL {
 	        this.tail = newNode;
 	    }
 	    
+	    public void printValuesForward(Node head) {
+	        // find the first node, aka head.
+	        Node current = head;
+	        
+	        // while the current node exists...
+	        while(current != null) {
+	            // print it's value
+	            System.out.println(current.value);
+	            // and move on to it's next node.
+	            current = current.next;
+	        }
+	    }
 	    public void printValuesForward() {
 	        // find the first node, aka head.
-	        Node current = this.head;
+	        Node current = head;
 	        
 	        // while the current node exists...
 	        while(current != null) {
@@ -49,8 +61,12 @@ public class DLL {
 	    	}
 	    }
 	    Node pop() {
+	    	if (head.next == null) {
+	    		return head=null;
+	    	}
 	    	Node current=this.tail.previous;
 	    	Node temp=current.next;
+	    	tail=current;
 	    	current.next=null;
 	    	temp.previous=null;
 	    	i--;
@@ -86,7 +102,48 @@ public class DLL {
 	    	for (int g=0;g<index-1;g++) {
 	    		current=current.next;
 	    	}
+	    	Node x=current.next;
 	    	current.next=current.next.next;
+	    	current.next.next.previous=current;
+	    	x.next=null;
+	    	x.previous=null;
+	    }
+	    void removeMiddle() {
+	    	Node current=this.head;
+	    	int i=0;
+	    	while(current.next!=null) {
+	    		current=current.next;
+	    		i++;
+	    	}
+	    	int middle=i/2;
+	    	removeAt(middle);
+	    }
+	    Node Normalreverse() {
+	    	Node prev=null;
+	    	Node current=head;
+	    	Node aux=current.next;
+	    	while(current!=null) {
+	    		current.next=prev;
+	    		prev=current;
+	    		current=aux;
+	    		if(current!=null) {
+	    			aux=aux.next;
+	    		}
+	    		
+	    	}
+	    	return prev;
+	    }
+	    void DLLreverse() {
+	    	Node temp= head;
+	    	head = tail;
+	    	tail= temp;
+	    	Node current=head;
+	    	while(current!=null) {
+	    		 temp= current.next;
+	    		 current.next=current.previous;
+	    		 current.previous=temp;
+	    		 current=current.next;
+	    	}
 	    }
 	 
 	}

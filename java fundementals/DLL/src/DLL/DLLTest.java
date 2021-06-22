@@ -12,16 +12,10 @@ public class DLLTest {
         Node n7 = new Node(500);
         dll.push(n1);
         dll.push(n2);
-        dll.push(n3);
-        dll.push(n4);
-        dll.push(n5);
-        dll.push(n6);
-  
-        dll.printValuesForward();
-        System.out.println("*******************************");
-        dll.insertAt(n7, 1);
-        dll.removeAt(1);
-        dll.printValuesForward();
+       dll.pop();
+       dll.pop();
+//        dll.DLLreverse();
+//        dll.printValuesForward();
         
     }
 }
