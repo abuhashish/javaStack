@@ -1,5 +1,7 @@
 package DLL;
 
+import java.util.ArrayList;
+
 public class DLL {
 	    public Node head;
 	    public Node tail;
@@ -144,6 +146,32 @@ public class DLL {
 	    		 current.previous=temp;
 	    		 current=current.next;
 	    	}
+	    }
+	    public boolean isLoop() {
+	    	Node current=head;
+	    	ArrayList<Node> x=new ArrayList<Node>();
+	    	while(current !=null) {
+	    		if(x.contains(current)) {
+	    			return true;
+	    		}
+	    		x.add(current);
+	    		current=current.next;
+	    		
+	    	}
+	    	return false;
+	    }
+	    public boolean isloop() {
+	    	Node current=head;
+	    	Node temp=head;
+	    	while(current.next!=null) {
+	    		current=current.next;
+	    		if(temp.next.next == null)
+	    			return false;
+	    		temp=temp.next.next;
+	    		if(current == temp) 
+	    			return true;	
+	    	}
+	    	return false;
 	    }
 	 
 	}
