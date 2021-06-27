@@ -76,12 +76,6 @@ public class BooksApi {
             return "redirect:/books";
         }
     }
-    @RequestMapping(value="/books/{id}")
-    public String show(@PathVariable("id") Long id,Model model) {
-      Book book = bookService.findBook(id);
-      model.addAttribute("book", book);
-      return "/books/show.jsp";
-    }
     @RequestMapping("/books/{id}/edit")
     public String edit(@PathVariable("id") Long id, Model model) {
         Book book = bookService.findBook(id);
@@ -98,6 +92,8 @@ public class BooksApi {
             return "redirect:/books";
         }
     }
+    
+
     
     @RequestMapping(value="/books/{id}", method=RequestMethod.DELETE)
     public String destroy(@PathVariable("id") Long id) {
